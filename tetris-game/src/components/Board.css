@@ -1,0 +1,15 @@
+.board {
+  display: inline-block;
+  background-color: #111;
+  border: 2px solid #333;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.board-row {
+  display: flex;
+}
+
+.board-cell {
+  box-sizing: border-box;
+  transition: background-color 0.1s ease;
+}

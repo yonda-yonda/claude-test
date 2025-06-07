@@ -1,0 +1,94 @@
+.board-game-board {
+  display: inline-block;
+  border: 2px solid #333;
+  background-color: #f5f5dc;
+  font-family: 'Courier New', monospace;
+  margin: 20px;
+}
+
+.column-labels {
+  display: flex;
+  background-color: #e0e0e0;
+}
+
+.column-label, .row-label {
+  width: 60px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+}
+
+.board-row {
+  display: flex;
+}
+
+.board-cell {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #fafafa;
+  transition: background-color 0.2s;
+}
+
+.board-cell:hover {
+  background-color: #e6f3ff;
+}
+
+.board-cell.selected {
+  background-color: #ffeb3b;
+  box-shadow: inset 0 0 0 2px #ff9800;
+}
+
+.piece {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+}
+
+.piece-type {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.piece-direction {
+  font-size: 14px;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.piece.first-player {
+  color: #1976d2;
+}
+
+.piece.second-player {
+  color: #d32f2f;
+}
+
+.board-cell:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+.board-cell:nth-child(even):hover {
+  background-color: #e0f0ff;
+}
+
+.board-row:nth-child(even) .board-cell:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+
+.board-row:nth-child(odd) .board-cell:nth-child(even) {
+  background-color: #f0f0f0;
+}

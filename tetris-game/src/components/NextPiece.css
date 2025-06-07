@@ -1,0 +1,28 @@
+.next-piece {
+  background-color: #1a1a1a;
+  border: 2px solid #333;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.next-piece h3 {
+  margin: 0 0 10px 0;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.next-piece-display {
+  display: inline-block;
+  padding: 8px;
+}
+
+.next-piece-row {
+  display: flex;
+}
+
+.next-piece-cell {
+  box-sizing: border-box;
+}

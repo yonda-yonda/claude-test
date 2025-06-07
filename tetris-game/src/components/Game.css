@@ -1,0 +1,255 @@
+.game-container {
+  min-height: 100vh;
+  height: 100vh;
+  background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+  color: white;
+  font-family: 'Arial', sans-serif;
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-header {
+  text-align: center;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.game-header h1 {
+  font-size: clamp(28px, 5vw, 48px);
+  margin: 0;
+  background: linear-gradient(45deg, #00f0f0, #f0f000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 6px;
+  text-shadow: 0 0 30px rgba(0, 240, 240, 0.5);
+}
+
+.game-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(20px, 3vw, 40px);
+  max-width: 1400px;
+  margin: 0 auto;
+  flex: 1;
+  overflow: hidden;
+}
+
+.game-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+.game-main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-controls {
+  background-color: #1a1a1a;
+  border: 2px solid #333;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.game-controls h3 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.controls-list {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.restart-button {
+  background: linear-gradient(45deg, #00f0f0, #0080ff);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 240, 240, 0.3);
+}
+
+.restart-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 240, 240, 0.4);
+}
+
+.restart-button:active {
+  transform: translateY(0);
+}
+
+.game-over-overlay,
+.pause-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.game-over-content,
+.pause-content {
+  text-align: center;
+  padding: 40px;
+  background-color: #1a1a1a;
+  border: 2px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+}
+
+.game-over-content h2,
+.pause-content h2 {
+  margin: 0 0 20px 0;
+  font-size: 36px;
+  color: #ff0000;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.pause-content h2 {
+  color: #f0f000;
+}
+
+.game-over-content p,
+.pause-content p {
+  margin: 0 0 30px 0;
+  font-size: 20px;
+  color: #ccc;
+}
+
+.game-over-content button {
+  background: linear-gradient(45deg, #ff0000, #ff6600);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.game-over-content button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+}
+
+/* 大画面用の最適化 */
+@media (min-height: 900px) {
+  .game-info h3 {
+    font-size: 18px;
+  }
+  
+  .info-item p {
+    font-size: 28px;
+  }
+  
+  .next-piece h3 {
+    font-size: 18px;
+  }
+  
+  .game-controls h3 {
+    font-size: 18px;
+  }
+  
+  .controls-list {
+    font-size: 14px;
+  }
+  
+  .restart-button {
+    padding: 15px 30px;
+    font-size: 16px;
+  }
+}
+
+/* レスポンシブデザイン - 高さ720px以下の画面用 */
+@media (max-height: 720px) {
+  .game-container {
+    padding: 5px;
+  }
+  
+  .game-header {
+    margin-bottom: 10px;
+  }
+  
+  .game-header h1 {
+    font-size: 28px;
+    letter-spacing: 4px;
+  }
+  
+  .game-content {
+    gap: 15px;
+  }
+  
+  .game-sidebar {
+    gap: 10px;
+  }
+  
+  .game-info {
+    padding: 10px;
+  }
+  
+  .info-item {
+    margin-bottom: 10px;
+  }
+  
+  .info-item h3 {
+    font-size: 12px;
+  }
+  
+  .info-item p {
+    font-size: 16px;
+  }
+  
+  .next-piece {
+    padding: 10px;
+  }
+  
+  .next-piece h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .game-controls {
+    padding: 10px;
+  }
+  
+  .game-controls h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .controls-list {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+  
+  .restart-button {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}

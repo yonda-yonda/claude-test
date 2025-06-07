@@ -1,0 +1,104 @@
+.hand-pieces-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  min-width: 200px;
+}
+
+.hand-pieces-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.player-label {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.player-label.first-player {
+  color: #1976d2;
+  background-color: #e3f2fd;
+}
+
+.player-label.second-player {
+  color: #d32f2f;
+  background-color: #ffebee;
+}
+
+.hand-pieces-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 50px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.hand-piece {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid;
+  border-radius: 4px;
+  font-weight: bold;
+  background-color: white;
+  transition: all 0.2s;
+}
+
+.hand-piece.first-player {
+  border-color: #1976d2;
+  color: #1976d2;
+}
+
+.hand-piece.second-player {
+  border-color: #d32f2f;
+  color: #d32f2f;
+}
+
+.hand-piece.clickable {
+  cursor: pointer;
+}
+
+.hand-piece.clickable:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hand-piece.selected {
+  background-color: #ffeb3b;
+  box-shadow: 0 0 0 2px #ff9800;
+}
+
+.hand-piece .piece-type {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.hand-piece .piece-direction {
+  font-size: 10px;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.no-pieces {
+  color: #666;
+  font-style: italic;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
