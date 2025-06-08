@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 import { BoardGameLogic } from '../utils/boardGameLogic';
-import * as readline from 'readline';
+import { createInterface } from 'readline';
 
-const rl = readline.createInterface({
+const rl = createInterface({
   input: process.stdin,
   output: process.stdout
 });
