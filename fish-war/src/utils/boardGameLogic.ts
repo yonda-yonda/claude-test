@@ -281,7 +281,7 @@ export class BoardGameLogic {
     return {
       success: true,
       gameState: { ...newGameState },
-      gameResult: newGameState.gameResult
+      gameResult: newGameState.gameResult || undefined
     };
   }
 
