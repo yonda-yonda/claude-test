@@ -51,15 +51,15 @@ npx tsx src/cli/sampleGame.ts
 コマンドライン引数で複数の手を一度に実行します。
 
 ```bash
-npx tsx src/cli/batchGame.ts "い↑B3B2" "た↓C1C2" "ま↑B4B3"
+npx tsx src/cli/batchGame.ts "い↑B3B2" "ま↓B1B2" "ま↑B4B3"
 ```
 
 ### 使用例
 
 #### 短いゲーム
 ```bash
-# 先手のいなだを前進させ、後手のたこを動かす
-npx tsx src/cli/batchGame.ts "い↑B3B2" "た↓C1C2"
+# 先手のいなだを前進させ、後手のまぐろで捕獲
+npx tsx src/cli/batchGame.ts "い↑B3B2" "ま↓B1B2"
 ```
 
 #### 勝利までのシナリオ
@@ -67,12 +67,9 @@ npx tsx src/cli/batchGame.ts "い↑B3B2" "た↓C1C2"
 # まぐろ捕獲による勝利の例
 npx tsx src/cli/batchGame.ts \
   "い↑B3B2" \
-  "い↓B2B3" \
+  "ま↓B1B2" \
   "ま↑B4B3" \
-  "た↓C1C2" \
-  "ま↑B3B2" \
-  "か↓A1A2" \
-  "ま↑B2B1"
+  "ま↓B2B3"
 ```
 
 ## 手の記法

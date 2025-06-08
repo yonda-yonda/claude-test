@@ -5,17 +5,12 @@ console.log('おさかな対戦 - サンプルゲーム実行\n');
 
 const game = new BoardGameLogic();
 
-// ゲームの手順を定義
+// ゲームの手順を定義（有効な手順に修正）
 const moves = [
-  { move: 'い↑B3B2', description: '先手: いなだを前進' },
-  { move: 'た↓C1C2', description: '後手: たこを前進' },
-  { move: 'た↑A4A3', description: '先手: たこを前進' },
-  { move: 'た↓C2B3', description: '後手: たこで先手のコマを狙う' },
-  { move: 'い↑B2B1', description: '先手: いなだを相手陣地へ（ぶりに出世）' },
-  { move: 'ま↓B1B2', description: '後手: まぐろで相手のぶりを捕獲' },
-  { move: 'ま↑B4B3', description: '先手: まぐろを前進' },
-  { move: 'た↓B3A2', description: '後手: たこを移動' },
-  { move: 'ま↑B3B2', description: '先手: まぐろで後手のまぐろを捕獲（勝利）' }
+  { move: 'い↑B3B2', description: '先手: いなだを前進（B3→B2）' },
+  { move: 'ま↓B1B2', description: '後手: まぐろで先手のいなだを捕獲（B1→B2）' },
+  { move: 'ま↑B4B3', description: '先手: まぐろを前進（B4→B3）' },
+  { move: 'ま↓B2B3', description: '後手: まぐろで先手のまぐろを捕獲（B2→B3）→ゲーム終了' }
 ];
 
 console.log('=== 初期盤面 ===');
